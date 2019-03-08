@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="midtermPracticeApp" class="no-js" lang="en" dir="ltr">
+<html ng-app class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,9 +7,9 @@
     <title>ET-710 Midterm Pratice</title>
 
     <!-- AngularJS -->
-    <script src="js/vendor/angular.min.js"></script>
-    <script src="js/vendor/angular-animate.min.js"></script>
-    <script src="js/vendor/angular-route.min.js"></script>
+    <script src="../js/vendor/angular.min.js"></script>
+    <script src="../js/vendor/angular-animate.min.js"></script>
+    <script src="../js/vendor/angular-route.min.js"></script>
 
 
     <!-- Data Tables -->
@@ -28,14 +28,14 @@
     <link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
 
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/app.css">
 
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="css/subnav.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/content.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="../css/footer.css">
   </head>
   <body>
 
@@ -47,17 +47,17 @@
           <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle></button>
           </span>
-          <a class="topbar-responsive-logo" href="index.html"><strong>Midterm Practice</strong></a>
+          <a class="topbar-responsive-logo" href="../index.html"><strong>Midterm Practice</strong></a>
         </div>
         <div id="topbar-responsive" class="topbar-responsive-links">
           <div class="top-bar-right">
             <ul class="menu simple vertical medium-horizontal">
-              <li><a href="#">Home</a></li>
-              <li><a href="about/index.html">About</a></li>
-              <li><a href="services/index.html">Services</a></li>
-              <li><a href="index.html#!/works">Works</a></li>
-              <li><a href="index.html#!/news">News</a></li>
-              <li><a href="index.html#!/contact">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about/index.html">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="../index.html#!/works">Works</a></li>
+              <li><a href="../index.html#!/news">News</a></li>
+              <li><a href="../index.html#!/contact">Contact</a></li>
               <li>
                 <button type="button" class="button hollow topbar-responsive-button">Categories</button>
               </li>
@@ -82,8 +82,14 @@
 
 
   <!-- *Begin Content -->
+  <h1>Services</h1>
     <!-- *Begin AngularJS -->
-    <div ng-view></div>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
     <!-- *End   AngularJS -->
   <!-- *End   Content -->
 
@@ -149,12 +155,12 @@
         </div>
         <div class="column">
           <ul class="menu marketing-site-footer-bottom-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="about/index.html">About</a></li>
-            <li><a href="services/index.html">Services</a></li>
-            <li><a href="index.html#!/works">Works</a></li>
-            <li><a href="index.html#!/news">News</a></li>
-            <li><a href="index.html#!/contact">Contact</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="../index.html#!/works">Works</a></li>
+            <li><a href="../index.html#!/news">News</a></li>
+            <li><a href="../index.html#!/contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -163,31 +169,9 @@
   <!-- *End   Footer -->
 
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-
-    <script>
-      var app = angular.module('midtermPracticeApp', ['ngRoute']);
-      app.config(function($routeProvider) {
-        $routeProvider.when('/', {
-          controller:'HomeController',
-          templateUrl:'app/views/home.html'
-        })
-        .when('/works', {
-          controller:'WorksController',
-          templateUrl:'app/views/works.html'
-        })
-        .when('/news', {
-          controller:'NewsController',
-          templateUrl:'app/views/news.html'
-        })
-        .when('/contact', {
-          controller:'ContactController',
-          templateUrl:'app/views/contact.html'
-        })
-      });
-    </script>
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/vendor/what-input.js"></script>
+    <script src="../js/vendor/foundation.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
